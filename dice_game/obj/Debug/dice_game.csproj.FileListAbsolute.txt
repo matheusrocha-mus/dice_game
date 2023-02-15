@@ -6,3 +6,11 @@ C:\Users\sis\Documents\iury\dice_game\dice_game\bin\Debug\dice_game.exe
 C:\Users\sis\Documents\iury\dice_game\dice_game\bin\Debug\dice_game.pdb
 C:\Users\sis\Documents\iury\dice_game\dice_game\obj\Debug\dice_game.exe
 C:\Users\sis\Documents\iury\dice_game\dice_game\obj\Debug\dice_game.pdb
+C:\Users\mathe\dice_game\dice_game\bin\Debug\dice_game.exe.config
+C:\Users\mathe\dice_game\dice_game\bin\Debug\dice_game.exe
+C:\Users\mathe\dice_game\dice_game\bin\Debug\dice_game.pdb
+C:\Users\mathe\dice_game\dice_game\obj\Debug\dice_game.csproj.AssemblyReference.cache
+C:\Users\mathe\dice_game\dice_game\obj\Debug\dice_game.csproj.SuggestedBindingRedirects.cache
+C:\Users\mathe\dice_game\dice_game\obj\Debug\dice_game.csproj.CoreCompileInputs.cache
+C:\Users\mathe\dice_game\dice_game\obj\Debug\dice_game.exe
+C:\Users\mathe\dice_game\dice_game\obj\Debug\dice_game.pdb

@@ -41,8 +41,8 @@ public class Dice_Game
         bool confirm_1 = true;
         bool confirm_exit = true;
         bool confirm_2 = true;
-        int[] rolls1 = new int[3];
-        int[] rolls2 = new int[3];
+        int rolls1 = new int;
+        int rolls2 = new int;
         bool valid_entry = true;
         bool valid_round = true;
 
@@ -63,18 +63,15 @@ public class Dice_Game
                 if (confirm_roll || confirm_1)
                 {
                     valid_entry = true;
-                    rolls1[0] = dice.Next(6, 7);
-                    Console.WriteLine(name1 + " got a " + rolls1[0] + "!\n");
+                    rolls1 = dice.Next(1, 7);
+                    Console.WriteLine(name1 + " got a " + rolls1 + "!\n");
                 }
                 else if (confirm_exit || confirm_2)
                 {
                     valid_entry = true;
-                    Console.WriteLine("Thank you for playing!");
-                    Timer t = new Timer(timerC, null, 2000, 2000);
-                    void timerC(object state)
-                    {
-                        Environment.Exit(0);
-                    }
+                    Console.WriteLine("\nThank you for playing!");
+                    System.Threading.Thread.Sleep(2000);
+                    Environment.Exit(0);
                 }
                 else
                 {
@@ -95,18 +92,15 @@ public class Dice_Game
                 if (confirm_roll || confirm_1)
                 {
                     valid_entry = true;
-                    rolls2[0] = dice.Next(6, 7);
-                    Console.WriteLine(name2 + " got a " + rolls2[0] + "!\n");
+                    rolls2 = dice.Next(1, 7);
+                    Console.WriteLine(name2 + " got a " + rolls2 + "!\n");
                 }
                 else if (confirm_exit || confirm_2)
                 {
                     valid_entry = true;
-                    Console.WriteLine("Thank you for playing!");
-                    Timer t = new Timer(timerC, null, 2000, 2000);
-                    void timerC(object state)
-                    {
-                        Environment.Exit(0);
-                    }
+                    Console.WriteLine("\nThank you for playing!");
+                    System.Threading.Thread.Sleep(2000);
+                    Environment.Exit(0);
                 }
                 else
                 {
@@ -114,32 +108,29 @@ public class Dice_Game
                 }
             } while (valid_entry == false);
 
-            if (rolls1[0] > rolls2[0])
+            if (rolls1 > rolls2)
             {
                 valid_round = true;
-                Console.WriteLine(name1 + " won this round!");
+                Console.WriteLine(name1 + " won this round!\n");
             }
 
-            if (rolls2[0] > rolls1[0])
+            if (rolls2 > rolls1)
             {
                 valid_round = true;
-                Console.WriteLine(name2 + " won this round!");
+                Console.WriteLine(name2 + " won this round!\n");
             }
 
-            if (rolls1[0] == rolls2[0])
+            if (rolls1 == rolls2)
             {
                 valid_round = false;
-                Console.WriteLine("Draw! Roll again...");
-                Timer t = new Timer(timerC, null, 3000, 3000);
-                void timerC(object state)
-                {
-                    Console.Clear();
-                }
+                Console.WriteLine("Draw! Roll again...\n");
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
             }
 
         } while (valid_round == false);
         
-        Console.Clear();
+        
 
         Console.ReadKey();
     }
